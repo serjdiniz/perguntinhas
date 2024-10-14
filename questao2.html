@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <p>2 Pergunta: Qual é o maior planeta do sistema solar?</p>
+    <form id="form2">
+        <input type="radio" id="alternativa1" name="alternativa2" value="alternativa1">
+        <label for="alternativa1">Terra</label><br>
+
+        <input type="radio" id="alternativa2" name="alternativa2" value="alternativa2">
+        <label for="alternativa2">Júpiter</label><br>
+
+        <input type="radio" id="alternativa3" name="alternativa2" value="alternativa3">
+        <label for="alternativa3">Marte</label><br>
+        <input type="button" onclick="ChecarResposta()" value="Checar resposta">
+    </form>
+
+    <script>
+        function ChecarResposta() {
+            const alternativaCorreta = "alternativa2";
+            const opcaoEscolhida = document.querySelector('input[name="alternativa2"]:checked');
+            if (opcaoEscolhida) {
+                if (opcaoEscolhida.value === alternativaCorreta) {
+                    alert("Resposta correta");
+                    // Aqui você pode redirecionar para a próxima questão ou finalizar
+                    window.location.href = "final.html"; // Exemplo de redirecionamento
+                } else {
+                    alert("Resposta incorreta, tente novamente.");
+                }
+            } else {
+                alert("Escolha uma alternativa");
+            }
+        }
+    </script>
+</body>
+</html>

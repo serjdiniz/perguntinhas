@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1 Pergunta: Qual a data da primeira avaliação?</p>
+    <form id="form1">
+        <input type="radio" id="alternativa1" name="alternativa1" value="alternativa1">
+        <label for="alternativa1">07/10</label><br>
+
+        <input type="radio" id="alternativa2" name="alternativa1" value="alternativa2">
+        <label for="alternativa2">14/10</label><br>
+
+        <input type="radio" id="alternativa3" name="alternativa1" value="alternativa3">
+        <label for="alternativa3">30/10</label><br>
+        <input type="button" onclick="ChecarResposta()" value="Checar resposta">
+    </form>
+        
+    <script> 
+        function ChecarResposta() {
+            const alternativaCorreta = "alternativa2";
+            const opcaoEscolhida = document.querySelector('input[name="alternativa1"]:checked');
+            if (opcaoEscolhida) {
+                if (opcaoEscolhida.value === alternativaCorreta) {
+                    alert("Resposta correta");
+                    window.location.href = "questao2.html"; 
+                } else {
+                    alert("Resposta incorreta, tente novamente.");
+                }
+            } else {
+                alert("Escolha uma alternativa");
+            }
+        }
+    </script>
+
+</body>
+</html>
